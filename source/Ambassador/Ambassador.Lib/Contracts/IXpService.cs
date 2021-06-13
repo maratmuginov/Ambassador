@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Ambassador.Lib.Contracts
 {
-    public delegate Task LeveledUp(LeveledUpInfo leveledUpInfo);
+    public delegate Task LeveledUp(LeveledUpArgs leveledUpInfo);
 
     public interface IXpService
     {

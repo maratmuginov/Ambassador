@@ -7,9 +7,14 @@ namespace Ambassador.Tests.Fixtures
     {
         public event XpChanged XpChanged;
 
-        public void RaiseXpChanged()
+        public void RaiseXpChanged(int totalXp)
         {
-            var xpChangedInfo = new XpChangedInfo();
+            var xpChangedInfo = new XpChangedArgs
+            {
+                UserId = default,
+                ChannelId = default,
+                TotalXp = totalXp
+            };
             XpChanged?.Invoke(xpChangedInfo);
         }
     }
