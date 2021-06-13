@@ -1,13 +1,10 @@
-﻿using System;
+﻿using Ambassador.Bot.Services;
 using Ambassador.Lib.Contracts;
 using Ambassador.Lib.Models;
 using Ambassador.Lib.Services;
 using Ambassador.Tests.Fixtures;
+using System;
 using System.Threading.Tasks;
-using Ambassador.Bot.Services;
-using DSharpPlus;
-using DSharpPlus.EventArgs;
-using Moq;
 using Xunit;
 
 namespace Ambassador.Tests.Unit
