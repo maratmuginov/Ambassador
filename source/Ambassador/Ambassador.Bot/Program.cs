@@ -41,6 +41,7 @@ namespace Ambassador.Bot
                 .AddSingleton<BotConfig>(_ => JsonHelper.DeserializeFile<BotConfig>("botConfig.json"))
                 .AddSingleton<DiscordClient>(BuildDiscordClient)
                 .AddSingleton<IXpEventSource, MessageXpEventSource>()
+                .AddScoped<IUserMessageSource, UserMessageSource>()
                 .AddScoped<IXpService, XpService>()
                 .AddScoped<XpThrottleConfig>(_ => GetXpThrottleConfig())
                 .AddScoped<XpThresholdsConfig>(_ => GetXpThresholdsConfig())
